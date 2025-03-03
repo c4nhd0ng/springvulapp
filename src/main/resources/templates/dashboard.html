@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Dashboard</title>
+</head>
+<body>
+<h2>Welcome, <span th:text="${username}"></span>!</h2>
+<p th:text="${message}"></p> <!-- Hiển thị thông báo đăng nhập thành công -->
+<p><strong>Email hiện tại:</strong> <span th:text="${email}"></span></p>
+
+<!-- Form cập nhật email -->
+<form action="/csrf/updateemail01" method="POST">
+    <label>Nhập email mới:</label>
+    <input type="email" name="newEmail" required>
+    <button type="submit">Cập nhật Email</button>
+</form>
+<p th:text="${messageUpdateEmail}"></p>
+<br>
+<a href="/csrf/logout01">Logout</a>
+</body>
+</html>

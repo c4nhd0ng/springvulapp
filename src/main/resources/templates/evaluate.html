@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>SpEL Evaluation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        input, button {
+            padding: 10px;
+            margin: 5px 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Spring Expression Language (SpEL) Evaluation</h2>
+
+    <form method="get" action="/codeinjection/evaluate01">
+        <label for="expression">Enter SpEL Expression:</label>
+        <input type="text" id="expression" name="expression" placeholder="Eg: 'Hello ' + 'World'">
+        <button type="submit">Evaluate</button>
+    </form>
+
+    <h3>Result:</h3>
+    <p th:text="${greet}">Expression result will appear here</p>
+</div>
+
+</body>
+</html>

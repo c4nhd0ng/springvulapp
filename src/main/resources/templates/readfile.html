@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Read File</title>
+</head>
+<body>
+<h1>Read File</h1>
+
+<!-- Danh sách file có thể đọc -->
+<ul>
+  <li><a href="?filename=a.txt">a.txt</a></li>
+</ul>
+
+<!-- Kết quả hiển thị -->
+<h2>Result:</h2>
+<pre th:text="${result}"></pre>
+</body>
+</html>

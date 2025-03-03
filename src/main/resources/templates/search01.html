@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Search</title>
+</head>
+<body>
+
+<h1>Search for Users</h1>
+
+<!-- Form tìm kiếm -->
+<form action="/SQLi/search01" method="post">
+    <label for="username">Enter Name:</label>
+    <input type="text" id="username" name="username" th:value="${userSearch.username}">
+    <button type="submit">Search</button>
+</form>
+
+<!-- Hiển thị kết quả tìm kiếm -->
+<div>
+    <h2>Search Results</h2>
+    <ul>
+        <!-- Nếu có người dùng, hiển thị kết quả -->
+        <li th:each="user : ${users}">
+            <p th:text="|Name: ${user.username}|"></p>
+        </li>
+    </ul>
+
+    <!-- Nếu không có kết quả -->
+    <div th:if="${#lists.isEmpty(users)}">
+        <p>No users found.</p>
+    </div>
+</div>
+
+</body>
+</html>

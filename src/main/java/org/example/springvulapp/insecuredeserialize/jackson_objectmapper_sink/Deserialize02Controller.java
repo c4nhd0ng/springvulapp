@@ -23,6 +23,7 @@ public class Deserialize02Controller {
         ObjectMapper mapper = new ObjectMapper();
         mapper.enableDefaultTyping();
         Object obj = mapper.readValue(input, Object.class);
+
         // default constructor duoc goi va setter cua thuoc tinh duoc cung cap duoc goi
         model.addAttribute("output", obj.toString());
         return "deser";

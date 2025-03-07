@@ -116,6 +116,13 @@
             <version>1.4.20</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.openjdk.nashorn</groupId>
+            <artifactId>nashorn-core</artifactId>
+            <version>15.4</version>
+        </dependency>
+
+
         <!-- Log4j 2 Vulnerable Version -->
 <!--        <dependency>-->
 <!--            <groupId>org.apache.logging.log4j</groupId>-->
